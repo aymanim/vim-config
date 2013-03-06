@@ -71,6 +71,11 @@ set stl=%f\ %m\ %r%{fugitive#statusline()}\ Line:%l/%L[%p%%]\ Col:%v\ Buf:#%n\ [
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2
 
+" add a ruler
+set colorcolumn=80
+
+highlight ColorColumn ctermbg=DarkGray
+
 " Don't update the display while executing macros
 set lazyredraw
 
