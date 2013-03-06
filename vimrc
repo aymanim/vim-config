@@ -404,10 +404,10 @@ set tags=
 " NERD Tree Plugin Settings
 "-----------------------------------------------------------------------------
 " Toggle the NERD Tree on an off with F7
-nmap <F7> :NERDTreeToggle<CR>
+nmap <F8> :NERDTreeToggle<CR>
 
 " Close the NERD Tree with Shift-F7
-nmap <S-F7> :NERDTreeClose<CR>
+nmap <S-F8> :NERDTreeClose<CR>
 
 " Show the bookmarks table on startup
 let NERDTreeShowBookmarks=1
@@ -589,6 +589,9 @@ function! DiffCurrentFileAgainstAnother(snipoff, replacewith)
     only
     execute "vertical diffsplit " . otherfile
 endfunction
+
+execute pathogen#infect()
+
 
 command! -nargs=+ DiffCurrent call DiffCurrentFileAgainstAnother(<f-args>)
 
