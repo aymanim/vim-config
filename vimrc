@@ -29,6 +29,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+set spell
 
 " Printing options
 set printoptions=header:0,duplex:long,paper:letter
