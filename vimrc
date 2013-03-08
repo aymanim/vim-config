@@ -30,6 +30,24 @@ set softtabstop=2
 set expandtab
 set autoindent
 set spell
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
+
+augroup JumpCursorOnEdit
+   au!
+    autocmd BufReadPost *
+     \ if expand("<afile>:p:h") !=? $TEMP |
+     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+     \ let JumpCursorOnEdit_foo = line("'\"") |
+     \ let b:doopenfold = 1 |
+     \ if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
+     \ let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
+     \ let b:doopenfold = 2 |
+     \ endif |
+     \ exe JumpCursorOnEdit_foo |
+     \ endif |
+     \ endif
+
 
 " Printing options
 set printoptions=header:0,duplex:long,paper:letter
