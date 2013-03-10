@@ -29,7 +29,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
-set spell
+" set spell
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
 
