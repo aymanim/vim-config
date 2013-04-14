@@ -1,5 +1,5 @@
 "
-" Derek Wyatt's Vim Configuration
+" aymanim's modifications of Derek Wyatt's Vim Configuration
 "
 " It's got stuff in it.
 "
@@ -29,9 +29,11 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
-" set spell
+"set spell
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 augroup JumpCursorOnEdit
    au!
@@ -98,7 +100,7 @@ highlight ColorColumn ctermbg=DarkGray
 " Don't update the display while executing macros
 set lazyredraw
 
-" Don't show the current command int he lower right corner.  In OSX, if this is
+" Don't show the current command in the lower right corner.  In OSX, if this is
 " set and lazyredraw is set then it's slow as molasses, so we unset this
 set showcmd
 
@@ -487,13 +489,6 @@ augroup derek_twitvim
     au!
     au FileType twitvim call TwitVimMappings()
 augroup END
-
-"-----------------------------------------------------------------------------
-" VimSokoban settings
-"-----------------------------------------------------------------------------
-" Sokoban stuff
-let g:SokobanLevelDirectory = "/home/dwyatt/.vim/bundle/vim-sokoban/VimSokoban/"
-
 "-----------------------------------------------------------------------------
 " FuzzyFinder Settings
 "-----------------------------------------------------------------------------
@@ -808,7 +803,7 @@ iab teh        the
 "-----------------------------------------------------------------------------
 if has("gui_running")
   exe "set guifont=" . g:main_font
-  if hostname() == "dqw-linux"
+  if hostname() == "duquesne"
     set background=light
   else
     set background=dark
@@ -825,3 +820,9 @@ if has("gui_running")
   endif
 endif
 :nohls
+
+
+
+hi clear SpellBad
+hi SpellBad cterm=underline
+
