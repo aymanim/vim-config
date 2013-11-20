@@ -1,9 +1,7 @@
 "
-" Derek Wyatt's Vim Configuration
+" From from Derek Wyatt's Vim Configuration
 "
-" It's got stuff in it.
 "
-
 "-----------------------------------------------------------------------------
 " Global Stuff
 "-----------------------------------------------------------------------------
@@ -33,6 +31,10 @@ set autoindent
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
 hi clear SpellBad
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+
+
 
 augroup JumpCursorOnEdit
    au!
