@@ -32,6 +32,7 @@ set autoindent
 " set spell
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
+hi clear SpellBad
 
 augroup JumpCursorOnEdit
    au!
