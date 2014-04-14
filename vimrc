@@ -110,6 +110,9 @@ set showmode
 " Switch on syntax highlighting.
 syntax on
 
+" Allow using mouse to select without line numbers
+set mouse=a
+
 " Hide the mouse pointer while typing
 set mousehide
 
