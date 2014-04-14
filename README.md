@@ -1,6 +1,4 @@
-# Derek Wyatt's Vim Configuration
 
-Yup... it's a vim configuration.
 
 To install it, do the following:
 
@@ -9,5 +7,9 @@ To install it, do the following:
 * `cd ~/.vim/bundle && ./get`
 * `ln ~/.vim/vimrc ~/.vimrc`
 * Start Vim
+
+One liner:
+
+`git clone https://github.com/aymanim/vim-config.git ~/.vim && cd ~/.vim/bundle && ./get && ln ~/.vim/vimrc ~/.vimrc`
 
 Occassionally, the bundles may need updating.  To do this, `cd ~/.vim && ./update`

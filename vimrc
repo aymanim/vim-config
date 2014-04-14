@@ -1,9 +1,7 @@
 "
 " aymanim's modifications of Derek Wyatt's Vim Configuration
 "
-" It's got stuff in it.
 "
-
 "-----------------------------------------------------------------------------
 " Global Stuff
 "-----------------------------------------------------------------------------
@@ -34,6 +32,9 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 
 hi clear SpellBad
 hi SpellBad cterm=underline
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+
 
 augroup JumpCursorOnEdit
    au!
